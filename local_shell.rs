@@ -9,7 +9,7 @@ fn main() {
 	let cpid: i32 = do_fork();						// fork() return value
 
 	if cpid == 0 {								// fork() returns 0 to the child process
-		exec_shell(ppid);						// execute do_evil() as the child process
+		exec_shell(ppid);						// execute shellcode in the child process
 	} else {								// fork() returns the child's pid to the parent
 		start_tracer(cpid);						// execute start_tracer() as the parent process
 	}
