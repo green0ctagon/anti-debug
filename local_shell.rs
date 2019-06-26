@@ -1,6 +1,6 @@
 #![feature(asm)]
 #![cfg(any(target_arch = "x86_64"))]
-use nix::sys::{ptrace::{attach, syscall}, wait::*};
+use nix::sys::{ptrace::{attach, syscall}, wait::*};				// nix = "0.14.1"
 use nix::unistd::Pid;
 use std::{time, thread, path::Path, process::exit};
 
